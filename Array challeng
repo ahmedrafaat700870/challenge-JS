@@ -1,0 +1,35 @@
+// ِArray challeng
+let zero = 0;
+let counter = 3;
+let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+console.log(my.slice(zero,counter).concat(my[counter]).reverse()); // console.log : ["Osama", "Elham", "Mazero", "Ahmed"]
+///////////////////////////////////////////////////////////////////////
+let array = my.slice(zero,counter);
+array.shift() ;
+console.log(array.reverse()) ; // console.log : ["Elham", "Mazero"] 
+///////////////////////////////////////////////////////////////////////
+array = array.reverse() ;
+array.shift();
+array = array.slice(zero,counter).join().split('').slice(zero,counter) ;
+array.pop() ;
+let first = array[zero] ;
+array.shift()
+first = first + array[zero] ;
+let newarray = my.slice(zero,counter);
+newarray.shift() ;
+newarray.pop() ;
+sacoundArrray = newarray.join().split('') ;
+sacoundArrray.shift();
+sacoundArrray.shift();
+sacoundArrray = sacoundArrray.join('') ;
+console.log(first+sacoundArrray); // console.log : Elzero ; 
+///////////////////////////////////////////////////////////////////////
+my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"]; 
+my.shift();
+let firstChar = my[zero].slice(counter).split("") ;
+firstChar.shift() ;
+firstChar = firstChar.reverse().join("") ;
+let lastchar = firstChar.split("") ;
+lastchar.shift() ; 
+console.log(firstChar[zero].toUpperCase()+lastchar.join()) ; // console.log : Or ;
+///////////////////////////////////////////////////////////////////////
