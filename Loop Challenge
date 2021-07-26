@@ -1,0 +1,25 @@
+let myAdmins = ["ahmed", "mahmoud" ,"Stop" ,"ali"] ;
+let myEmployees = ["ali","ahmed" ,"marwa"];
+for (let i = 0; i < myAdmins.length; i++) {
+    if (myAdmins[i] === "Stop") {
+        document.write(`<div> We Have ${i} Admin`);
+        document.write(`<hr>`) ;
+        break ;   
+    }
+}
+myAdmins = myAdmins.slice(0,myAdmins.indexOf("Stop"));
+let count ;
+for (let m = 0; m < myAdmins.length; m++) {
+        document.write(`<div>`);
+        document.write(`<h3>The Admin for Team ${m + 1} is  <span>${myAdmins[m]}</span></h3>
+        <h1>Team Members </h1>`);
+        count = 1 ;
+        for (let j = 0; j < myEmployees.length; j++) {
+            if (myEmployees[j][0] === myAdmins[m][0]) {
+                document.write(`<h4>- ${count} ${myEmployees[j]}<h4>`);
+                count++ ;
+            }
+        }
+        document.write(`</div>`);
+        document.write(`<hr>`) ;
+}
